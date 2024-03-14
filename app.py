@@ -23,7 +23,13 @@ with st.expander('Analizar texto'):
         x=round(blob.sentiment.polarity,2)
         if x >= 0.5:
             st.write( 'Es un sentimiento Positivo 😊')
+            image = Image.open('emoticones.jpg')
+            st.image(image)
         elif x <= -0.5:
             st.write( 'Es un sentimiento Negativo 😔')
+            image = Image.open('emoticones.jpg')
+            st.image(image)
         else:
             st.write( 'Es un sentimiento Neutral 😐')
+            image = Image.open('emoticones.jpg')
+            st.image(image)
