@@ -28,6 +28,14 @@ with st.expander('Analizar texto'):
             audio_file = open('audio.mp4', 'rb')
             audio_bytes = audio_file.read()
             st.audio(audio_bytes, format='audio/mp4', start_time=0)
+            st.write(
+    f"""
+    <script>
+        const audioElement = document.getElementsByTagName("audio")[0];
+        audioElement.play();
+    </script>
+    """
+)
         elif x <= -0.5:
             st.write( 'Es un sentimiento Negativo 😔')
             image = Image.open('triste.jpg')
