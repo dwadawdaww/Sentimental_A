@@ -32,7 +32,13 @@ with st.expander('Analizar texto'):
             st.write( 'Es un sentimiento Negativo 😔')
             image = Image.open('triste.jpg')
             st.image(image)
+            audio_file = open('triste.mp4', 'rb')
+            audio_bytes = audio_file.read()
+            st.audio(audio_bytes, format='triste/mp4', start_time=0)
         else:
             st.write( 'Es un sentimiento Neutral 😐')
             image = Image.open('neutral.png')
             st.image(image)
+            audio_file = open('neutro.mp4', 'rb')
+            audio_bytes = audio_file.read()
+            st.audio(audio_bytes, format='neutro/mp4', start_time=0)
