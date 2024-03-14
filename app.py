@@ -24,7 +24,10 @@ with st.expander('Analizar texto'):
         if x >= 0.5:
             st.write( 'Es un sentimiento Positivo 😊')
             image = Image.open('feliz.webp')
-            st.image(image)        
+            st.image(image)
+            audio_file = open('audio.mp4', 'rb')
+            audio_bytes = audio_file.read()
+            st.audio(audio_bytes, format='audio/mp4')
         elif x <= -0.5:
             st.write( 'Es un sentimiento Negativo 😔')
             image = Image.open('triste.jpg')
